@@ -18,13 +18,8 @@ end
 def valid_move?(board, index)
   !position_taken?(board, index) && index.between?(0, 8)
 end
-board = ["X", "X", "X", "X", "O", "O", " X", "O", "X"]
+
 def turn(board)
-  puts " #{board[0]} | #{board[8]} | #{board[5]}  "
-  puts "-----------"
-  puts " #{board[1]} | #{board[2]} | #{board[3]}  "
-  puts "-----------"
-  puts " #{board[7]} | #{board[6]} | #{board[4]}  "
   puts "Please enter 1-9:"
   user_input = gets.strip
 end
