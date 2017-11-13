@@ -22,7 +22,7 @@ def turn(board)
   input = gets.strip
   if valid_move?(board, input)
     move(board, input)
-    move(board input)
+    move(board, input)
   else
     turn(board)
   end
