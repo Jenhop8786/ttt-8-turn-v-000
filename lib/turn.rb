@@ -1,17 +1,8 @@
 
-board = ["X", " ", " ", " ", " ", " ", " ", " ", "X"]
-
 def display_board(board)
- puts "display_board(board)"
- puts " #{board[0]} | #{board[8]} | #{board[5]}  "
- puts "-----------"
- puts " #{board[1]} | #{board[2]} | #{board[3]}  "
- puts "-----------"
- puts " #{board[7]} | #{board[6]} | #{board[4]}  "
-
 end
 
-def move(board, position, character = " ")
+def move(board, position, character = "X")
    board[position] = character
 end
 
