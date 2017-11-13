@@ -13,6 +13,7 @@ def valid_move?(board, position)
       if !position_taken?(board, position.to_i-1)
         true
       end
+    end
 end
 
 def turn(board)
@@ -34,7 +35,6 @@ end
 def move(board, location, current_player = "X")
      board[location.to_i-1] = current_player
   end
-
 
 def input_to_index(position)
   position.to_i - 1
