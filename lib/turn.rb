@@ -6,8 +6,12 @@ def move(board, position, character = "X")
    board[position] = character
 end
 
-def valid_move?(board, index)
-  !position_taken?(board, index) && index.between?(0, 8)
+def valid_move?(board, position)
+  if position.to_i.between?(1,9)
+    if position.to_i.between?(1,9)
+      if !position_taken?(board, position.to_i-1)
+        true
+      end
 end
 
 def turn(board)
