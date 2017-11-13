@@ -1,9 +1,14 @@
 
 def display_board(board)
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+  puts "-----------"
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts "-----------"
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def move(board, position, character = "X")
-   board[position] = character
+def move(board, location, current_player = "X")
+   board[location.to_i-1] = current_player
 end
 
 def valid_move?(board, position)
@@ -15,11 +20,19 @@ def valid_move?(board, position)
 end
 
 def turn(board)
+  display_board(board)
   puts "Please enter 1-9:"
-  user_input = gets.strip
+  input = gets.strip
+  if valid_move?(board, input)
+    move(board, input)
+    move(board input)
+  else
+    turn(board)
+  end
+  display_board(board)
 end
 
-def position_taken?(board, index)
+def position_taken?(board, location)
   !(board[index] == " " || board[index] == "" || board[index] == nil)
 end
 
