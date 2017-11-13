@@ -10,19 +10,15 @@ end
 
 def valid_move?(board, position)
   if position.to_i.between?(1,9)
-    if position.to_i.between?(1,9)
       if !position_taken?(board, position.to_i-1)
         true
-      end
     end
 end
 
-def turn(board, input)
-  display_board(board)
+def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   if valid_move?(board, input)
-    move(board, input)
     move(board, input)
   else
     turn(board)
